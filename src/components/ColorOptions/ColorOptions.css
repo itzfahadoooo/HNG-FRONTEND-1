@@ -1,0 +1,19 @@
+.color-options{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.color-option{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}

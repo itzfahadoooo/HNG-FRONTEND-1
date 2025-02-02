@@ -1,0 +1,24 @@
+.game-status {
+  font-size: 24px;
+  margin: 20px;
+  text-align: center;
+}
+
+.game-status.correct {
+  animation: celebration 1s ease-in-out;
+}
+
+.game-status.wrong {
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes celebration {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,9 @@
+.instruction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instruction h2{
+    color: #343434;
+
+}
