@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import GameStatus from "./components/GameStatus/GameStatus";
 
 const App = () => {
   const [targetColor, setTargetColor] = useState("");
@@ -30,7 +31,7 @@ const App = () => {
     startNewGame();
   }, []);
   return <div>
-    
+    <GameStatus gameStatus={gameStatus}/>
   </div>;
 };
 
