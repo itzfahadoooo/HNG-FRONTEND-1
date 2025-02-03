@@ -13,7 +13,7 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [gameStatus, setGameStatus] = useState("");
 
-  const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+  const colors = ["cyan", "magenta", "lime", "pink", "teal", "brown"];
 
   const startNewGame = (resetScore = true) => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
