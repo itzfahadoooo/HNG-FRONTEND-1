@@ -47,6 +47,8 @@ const App = () => {
   }, []);
   return (
     <div>
+      <h1 className="title">Color Guessing Game</h1>
+
       <GameStatus status={gameStatus} />
       <ScoreTracker score={score} />
       <ColorDisplay targetColor={targetColor} />
