@@ -33,12 +33,12 @@ const App = () => {
       setTimeout(() => {
         setGameStatus("");
         startNewGame(false);
-      }, 1000);
+      }, 2000);
     } else {
       setGameStatus("Wrong! Try again.");
       setTimeout(() => {
         setGameStatus("");
-      }, 1000);
+      }, 2000);
     }
   };
 
