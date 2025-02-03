@@ -7,3 +7,31 @@
     color: #343434;
 
 }
+
+.game-instructions {
+    color: #343434;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .game-instructions {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .game-instructions {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .game-instructions {
+        padding: 12px;
+        font-size: 18px;
+    }
+}

@@ -2,7 +2,6 @@
   font-size: 24px;
   margin: 20px;
   text-align: center;
-
 }
 
 .game-status.correct {
@@ -14,12 +13,43 @@
 }
 
 @keyframes celebration {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .game-status {
+    font-size: 18px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .game-status {
+    font-size: 22px;
+    margin: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-status {
+    font-size: 24px;
+    margin: 20px;
+  }
 }

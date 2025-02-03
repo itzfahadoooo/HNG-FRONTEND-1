@@ -10,3 +10,33 @@
     padding: 10px;
     color: #343434;
 }
+
+.score-tracker {
+    border: 2px solid #afafaf;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    color: #343434;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .score-tracker {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .score-tracker {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .score-tracker {
+        padding: 12px;
+        font-size: 18px;
+    }
+}

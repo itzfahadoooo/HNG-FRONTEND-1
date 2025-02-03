@@ -1,20 +1,17 @@
 import PropTypes from "prop-types";
+import "./ColorDisplay.css";
+
 const ColorDisplay = ({ targetColor }) => {
   return (
     <div
       data-testid="colorBox"
-      style={{
-        width: "300px",
-        height: "250px",
-        backgroundColor: targetColor,
-        border: "2px solid #afafaf",
-        margin: "10px auto",
-        borderRadius:"20px",
-      }}
+      className="color-display"
+      style={{ backgroundColor: targetColor }}
     >
     </div>
   );
 };
+
 ColorDisplay.propTypes = {
   targetColor: PropTypes.string.isRequired,
 };
