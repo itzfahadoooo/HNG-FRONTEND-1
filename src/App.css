@@ -34,6 +34,10 @@
     transition: transform 0.5s ease-in;
     font-weight: bold;
 }
+.reset:active {
+    background-color: red;
+    transform: scale(0.95);
+  }
 
 @media (min-width: 768px) {
     #root {
