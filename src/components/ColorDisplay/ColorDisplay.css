@@ -1,7 +1,7 @@
 .color-display {
   width: 300px;
   height: 250px;
-  border: 2px solid #afafaf;
+  border: 1px solid #afafaf;
   margin: 10px auto;
   border-radius: 20px;
 }

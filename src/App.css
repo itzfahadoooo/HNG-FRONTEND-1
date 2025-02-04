@@ -1,61 +1,76 @@
 #root {
-    padding: 10px;
-    background-color: #cabfb2;
-    margin: 30px auto;
-    border: 5px solid #afafaf;
-    border-radius: 20px;
-    max-width: 90%;
-    animation: fadeIn 1.5s;
-
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 30px auto;
+  border-radius: 20px;
+  max-width: 90%;
+  animation: fadeIn 1.5s;
 }
 
-.title{
-    color: #343434;
+.title {
+  color: #fff;
 }
 
 .reset-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .reset {
-    border: 2px solid #afafaf;
-    border-radius: 20px;
-    background-color: #f6f6f6;
-    padding: 10px;
-    color: #343434;
-    cursor: pointer;
+  border: 1px solid #afafaf;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  color: #343434;
+  cursor: pointer;
 }
 
 .reset:hover {
-    background-color: #afafaf;
-    transform: scale(1.1);
-    transition: transform 0.5s ease-in;
-    font-weight: bold;
+  background-color: #afafaf;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in;
+  font-weight: bold;
 }
 .reset:active {
-    background-color: red;
-    transform: scale(0.95);
-  }
+  background-color: red;
+  transform: scale(0.95);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
 
 @media (min-width: 768px) {
-    #root {
-        max-width: 80%;
-    }
+  #root {
+    max-width: 80%;
+  }
 }
 
 @media (min-width: 1024px) {
-    #root {
-        max-width: 60%;
-    }
+  #root {
+    max-width: 60%;
+  }
 }
 
-@keyframes fadeIn{
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}

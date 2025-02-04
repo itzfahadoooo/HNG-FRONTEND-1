@@ -42,7 +42,7 @@ const App = () => {
     const { targetColor, options } = generateColors();
     setTargetColor(targetColor);
     setColorOptions(options);
-    
+
     if (resetScore) {
       setScore(0);
     }
@@ -72,22 +72,31 @@ const App = () => {
 
   return (
     <div>
-      <h1 className="title">Color Guessing Game</h1>
+      <video autoPlay loop muted className="video-background">
+        <source src="/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="content">
+        <h1 className="title">Color Guessing Game</h1>
 
-      <GameStatus status={gameStatus} />
-      <ScoreTracker score={score} />
-      <ColorDisplay targetColor={targetColor} />
-      <GameInstructions />
-      <ColorOptions colorOptions={colorOptions} onColorSelect={handleColorGuess} />
+        <GameStatus status={gameStatus} />
+        <ScoreTracker score={score} />
+        <ColorDisplay targetColor={targetColor} />
+        <GameInstructions />
+        <ColorOptions
+          colorOptions={colorOptions}
+          onColorSelect={handleColorGuess}
+        />
 
-      <div className="reset-container">
-        <button
-          data-testid="newGameButton"
-          onClick={() => startNewGame()}
-          className="reset"
-        >
-          <h2>New Game</h2>
-        </button>
+        <div className="reset-container">
+          <button
+            data-testid="newGameButton"
+            onClick={() => startNewGame()}
+            className="reset"
+          >
+            <h2>New Game</h2>
+          </button>
+        </div>
       </div>
     </div>
   );
