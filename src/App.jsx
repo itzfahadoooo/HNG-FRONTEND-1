@@ -1,6 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameStatus from "./components/GameStatus/GameStatus";
 import ScoreTracker from "./components/ScoreTracker/ScoreTracker";
 import ColorDisplay from "./components/ColorDisplay/ColorDisplay";
@@ -13,12 +12,37 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [gameStatus, setGameStatus] = useState("");
 
-  const colors = ["cyan", "magenta", "lime", "coral", "yellow", "red"];
+  const generateRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  const generateColors = () => {
+    const newTargetColor = generateRandomColor();
+    const options = [newTargetColor];
+
+    while (options.length < 6) {
+      const newColor = generateRandomColor();
+      if (!options.includes(newColor)) {
+        options.push(newColor);
+      }
+    }
+
+    return {
+      targetColor: newTargetColor,
+      options: options.sort(() => Math.random() - 0.5),
+    };
+  };
 
   const startNewGame = (resetScore = true) => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setTargetColor(randomColor);
-    setColorOptions(colors.sort(() => 0.5 - Math.random()).slice(0, 6));
+    const { targetColor, options } = generateColors();
+    setTargetColor(targetColor);
+    setColorOptions(options);
+    
     if (resetScore) {
       setScore(0);
     }
@@ -28,7 +52,7 @@ const App = () => {
 
   const handleColorGuess = (color) => {
     if (color === targetColor) {
-      setScore(score + 1);
+      setScore((prevScore) => prevScore + 1);
       setGameStatus("Correct!");
       setTimeout(() => {
         setGameStatus("");
@@ -45,6 +69,7 @@ const App = () => {
   useEffect(() => {
     startNewGame();
   }, []);
+
   return (
     <div>
       <h1 className="title">Color Guessing Game</h1>
@@ -53,10 +78,7 @@ const App = () => {
       <ScoreTracker score={score} />
       <ColorDisplay targetColor={targetColor} />
       <GameInstructions />
-      <ColorOptions
-        colorOptions={colorOptions}
-        onColorSelect={handleColorGuess}
-      />
+      <ColorOptions colorOptions={colorOptions} onColorSelect={handleColorGuess} />
 
       <div className="reset-container">
         <button
