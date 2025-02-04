@@ -7,8 +7,7 @@ const ColorDisplay = ({ targetColor }) => {
       data-testid="colorBox"
       className="color-display"
       style={{ backgroundColor: targetColor }}
-    >
-    </div>
+    />
   );
 };
 

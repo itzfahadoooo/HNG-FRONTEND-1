@@ -11,9 +11,7 @@ const ColorOptions = ({ colorOptions, onColorSelect }) => {
           style={{ backgroundColor: color }}
           onClick={() => onColorSelect(color)}
           data-testid="colorOption"
-        >
-          
-        </button>
+        />
       ))}
     </div>
   );
