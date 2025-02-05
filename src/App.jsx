@@ -79,11 +79,12 @@ const App = () => {
       <div className="content">
         <h1 className="title">Color Guessing Game</h1>
 
-        <GameStatus status={gameStatus} />
-        <ScoreTracker score={score} />
-        <ColorDisplay targetColor={targetColor} />
-        <GameInstructions />
+        <GameStatus data-testid="gameStatus" status={gameStatus} />
+        <ScoreTracker data-testid="score" score={score} />
+        <ColorDisplay data-testid="colorBox" targetColor={targetColor} />
+        <GameInstructions data-testid="gameInstructions" />
         <ColorOptions
+          data-testid="colorOption"
           colorOptions={colorOptions}
           onColorSelect={handleColorGuess}
         />
